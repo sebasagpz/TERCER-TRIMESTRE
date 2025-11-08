@@ -1,0 +1,2 @@
+Las dependencias instaladas fueron:
+html, venv, pscyopg2, flask, postgres

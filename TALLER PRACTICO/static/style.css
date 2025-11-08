@@ -1,0 +1,63 @@
+@font-face {
+    font-family: "NeueHaasBold";
+    src: url("/static/fonts/NeueHaasDisplay-Bold.otf") format("opentype");
+    font-weight: bold;
+    font-style: normal;
+}
+
+/* ----------- TU CSS NORMAL ----------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: url("/static/background.png") no-repeat center center fixed;
+    background-size: cover;
+    font-family: "NeueHaasBold", sans-serif;
+}
+
+
+.form-register {
+    width: 400px;
+    background: #fefefe;
+    padding: 30px; 
+    margin: auto;
+    margin-top: 100px;
+    border-radius: 20px;
+    color: white;
+}
+
+.form-register h4 {
+    font-size: 22px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.controls {
+    width: 100%;
+    background: #47494c;
+    padding: 10px;
+    border-radius: 20px;
+    margin-bottom: 16px;
+    border: 1px solid #0e3e5b;
+    color: white;
+    font-size: 18px;
+}
+
+.botons {
+    width: 100%;
+    background: #0e3e5b;
+    border: none;
+    padding: 12px;
+    color: white;
+    font-size: 18px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.botons:hover {
+    background: #0e3e5b;
+}
