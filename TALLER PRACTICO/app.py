@@ -20,7 +20,7 @@ def conectar():
 
 @app.route("/", methods=["GET", "POST"])
 def formulario():
-    if request.method == "POST": # enviar el dato al formulario
+    if request.method == "POST":
         nombre = request.form["nombre"]
         apellido = request.form["apellido"]
         direccion = request.form["direccion"]
@@ -31,14 +31,15 @@ def formulario():
         conn = conectar()
         cursor = conn.cursor()
         cursor.execute("""
-            INSERT INTO registros (nombre, apellido, direccion, telefono, correo, mensaje) 
-            VALUES (%s, %s, %s, %s, %s, %s) # espacio donde van los valores
+            INSERT INTO registros (nombre, apellido, direccion, telefono, correo, mensaje)
+            VALUES (%s, %s, %s, %s, %s, %s)
         """, (nombre, apellido, direccion, telefono, correo, mensaje))
+
         conn.commit()
-        cursor.close() # decirle que hacer, osea cerrar
+        cursor.close()
         conn.close()
 
-        return "Los datos fueron guardados correctamente."
+        return "✅ Los datos fueron guardados correctamente."
 
     return render_template("form.html")
 
